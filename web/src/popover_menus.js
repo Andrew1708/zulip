@@ -12,6 +12,7 @@ import render_compose_control_buttons_popover from "../templates/compose_control
 import render_compose_select_enter_behaviour_popover from "../templates/compose_select_enter_behaviour_popover.hbs";
 import render_delete_topic_modal from "../templates/confirm_dialog/confirm_delete_topic.hbs";
 import render_drafts_sidebar_actions from "../templates/drafts_sidebar_action.hbs";
+import render_gear_menu from "../templates/gear_menu.hbs";
 import render_left_sidebar_stream_setting_popover from "../templates/left_sidebar_stream_setting_popover.hbs";
 import render_mobile_message_buttons_popover_content from "../templates/mobile_message_buttons_popover_content.hbs";
 import render_send_later_modal from "../templates/send_later_modal.hbs";
@@ -38,6 +39,7 @@ import * as message_lists from "./message_lists";
 import * as message_viewport from "./message_viewport";
 import * as narrow_state from "./narrow_state";
 import * as overlays from "./overlays";
+import {page_params} from "./page_params";
 import * as popover_menus_data from "./popover_menus_data";
 import * as popovers from "./popovers";
 import * as read_receipts from "./read_receipts";
@@ -67,6 +69,7 @@ const popover_instances = {
     compose_enter_sends: null,
     topics_menu: null,
     send_later: null,
+    personal_menu: null,
 };
 
 export function sidebar_menu_instance_handle_keyboard(instance, key) {
@@ -119,6 +122,10 @@ export function get_compose_control_buttons_popover() {
 
 export function get_starred_messages_popover() {
     return popover_instances.starred_messages;
+}
+
+export function get_personal_menu() {
+    return popover_instances.personal_menu;
 }
 
 export function is_compose_enter_sends_popover_displayed() {
@@ -911,5 +918,12 @@ export function initialize() {
             instance.destroy();
             popover_instances.send_later = undefined;
         },
+    });
+
+
+
+    tippy("#personal-menu", {
+
+
     });
 }

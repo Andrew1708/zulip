@@ -2163,6 +2163,19 @@ div.focused_table {
     }
 }
 
+#personal-menu .header-button-profile {
+    background-image: url('/../web/shared/icons/profile.svg');
+    background-size: cover;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    top: 11px;
+    left: 180px;
+    
+  }
+
 #navbar-buttons {
     white-space: nowrap;
     margin-left: 15px;
