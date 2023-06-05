@@ -929,7 +929,7 @@ export function initialize() {
         },
     });
 
-    register_popover_menu(".c-avatar__icon", {
+    register_popover_menu(".c-avatar", {
         placement: "bottom",
         offset: [0, 0],
         onMount(instance) {

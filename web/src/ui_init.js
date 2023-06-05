@@ -219,6 +219,8 @@ function initialize_navbar() {
     const rendered_navbar = render_navbar({
         embedded: page_params.narrow_stream !== undefined,
         search_pills_enabled: page_params.search_pills_enabled,
+        user_avatar: page_params.avatar_url_medium,
+        user_name : page_params.full_name,
     });
 
     $("#header-container").html(rendered_navbar);
