@@ -893,3 +893,17 @@ ul {
         padding-bottom: 16px;
     }
 }
+
+.c-avatar {
+    border: none;
+  
+    background: none;
+    
+    cursor: pointer;
+  }
+  
+  .c-avatar__icon {
+    font-size: 1.7rem;
+    color: hsl(0, 0%, 57.65%);
+  }
+  

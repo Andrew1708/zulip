@@ -108,7 +108,7 @@ function copy_email_handler(e) {
     e.clearSelection();
 }
 
-function init_email_clipboard() {
+export function init_email_clipboard() {
     /*
         This shows (and enables) the copy-text icon for folks
         who have names that would overflow past the right
@@ -134,7 +134,7 @@ function init_email_clipboard() {
     });
 }
 
-function init_email_tooltip(user) {
+export function init_email_tooltip(user) {
     /*
         This displays the email tooltip for folks
         who have names that would overflow past the right
@@ -152,7 +152,7 @@ function init_email_tooltip(user) {
     });
 }
 
-function load_medium_avatar(user, $elt) {
+export function load_medium_avatar(user, $elt) {
     const user_avatar_url = people.medium_avatar_url_for_person(user);
     const sender_avatar_medium = new Image();
 
@@ -217,7 +217,7 @@ function show_user_info_popover_manage_menu(element, user) {
     $current_user_info_popover_manage_menu = $popover_elt;
 }
 
-function render_user_info_popover(
+export function render_user_info_popover(
     user,
     popover_element,
     is_sender_popover,
