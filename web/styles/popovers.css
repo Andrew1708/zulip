@@ -901,13 +901,12 @@ ul {
     
     cursor: pointer;
 
-
-    margin-left: 80px;
     margin-top: 1px;
+    vertical-align: top; /* Align the button to the top */
   }
 
   .c-avatar:hover {
-  background-color: #d1cdcd; /* Set the background color for hover state */
+  background-color: #e9e7e7; /* Set the background color for hover state */
 }
 
   .c-avatar__content {
@@ -925,19 +924,23 @@ ul {
     border-radius: 50%; /* Make the icon circular */
     image-rendering: crisp-edges;
     transition: none;
-  }
-
-  .c-avatar:hover .c-avatar__icon {
-    transform: scale(1.05); /* Increase the scale of the icon on hover */
+    vertical-align: top;
   }
   
   .c-avatar__name {
     margin-left: 0.5rem;
-    margin-top: 0.7rem;
     font-weight: bold;
-    color: #000; /* Set the desired text color */
-    font-size: 0.9rem; /* Adjust the font size as needed */
-    text-overflow: ellipsis; /* Add ellipsis (...) when the text overflows */
-    white-space: nowrap; /* Prevent the name from wrapping to the next line */
-    overflow: hidden; /* Hide any overflowed text */
-  }
+    color: #000;
+    font-size: 0.9rem;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+}
+
+.c-avatar:hover .c-avatar__name {
+    white-space: normal; /* Display the full text on hover */
+    overflow: visible;
+    text-overflow: initial;
+}
